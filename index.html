@@ -6,11 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <!-- fonts -->
+    <!-- Shrikhand pour titre et logo / Roboto pour le reste -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Karla:ital,wght@0,200;0,500;0,800;1,200;1,500;1,800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+     <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 <body>
     <header>
-        <h1>Oh my Food</h1>
+        <nav><div class="logo"><img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood"></div></nav>
     </header>
+
+    <main>
+        <section class="reservez">
+            
+                <div class="search-bar">
+                    <label for="search"><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" id="search" placeholder="" value="Paris, Belleville">
+                </div>
+                <div class="title-reservez">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p class="subtitle">Découvrez des restaurants d'exception, <br>
+                    selectionnés par nos soins</p>
+                </div>
+                <div class="button-explorer">
+                    <button>Explorer nos restaurants</button>
+                </div>
+            
+        </section>
+
+        <section class="fonctionnement">
+           
+            <h2>Fonctionnement</h2>
+            
+            <div class="etape">
+                <div class="numero">1</div>
+                <div class="etape-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="etape-titre"><p>Choisissez un restaurant</p></div>
+            </div>
+            <div class="etape">
+                <div class="numero">2</div>
+                <div class="etape-icon"><i class="fas fa-list"></i></div>
+                <div class="etape-titre"><p>Composez votre menu</p></div>
+            </div>
+            <div class="etape">
+                <div class="numero">3</div>
+                <div class="etape-icon"><i class="fas fa-store"></i></div>
+                <div class="etape-titre"><p>Dégustez au restaurant</p></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,22 @@
+// Valeur de base 
+
+// Petit tel 
+$x-small: 320px!default;
+// tel
+$small: 414px!default;
+// tablette
+$medium: 768px!default;
+// desktop
+$large: 992px!default;
+// desktop L 
+$x-large: 1280px!default;
+
+$small-down: "only screen and (max-width: #{$small})";
+$small-up: "only screen and (min-width: #{$small})";
+$medium-down: "only screen and (max-width: #{$medium})";
+$medium-up: "only screen and (min-width: #{$medium})";
+$large-down: "only screen and (max-width: #{$large})";
+$large-up: "only screen and (min-width: #{$large})";
+$x-large-down: "only screen and (max-width: #{$x-large})";
+$x-large-up: "only screen and (min-width: #{$x-large})";
+

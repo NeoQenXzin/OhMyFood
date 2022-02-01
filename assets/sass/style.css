@@ -1,0 +1,286 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', cursive;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+header .logo {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo img {
+  width: 50%;
+  max-width: 200px;
+}
+
+main {
+  height: auto;
+  width: 100%;
+}
+
+.reservez {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 360px;
+  background: #f6f6f6;
+}
+
+.reservez h1 {
+  font-size: 28px;
+  padding: 10px;
+  padding-bottom: 15px;
+  line-height: 1.1;
+  font-weight: bolder;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0 0 1px #333;
+}
+
+.reservez p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: #777;
+}
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #EAEAEA;
+  background: -webkit-gradient(linear, left bottom, left top, from(#EAEAEA), color-stop(82%, #EAEAEA), color-stop(97%, #CCCCCC));
+  background: linear-gradient(to top, #EAEAEA 0%, #EAEAEA 82%, #CCCCCC 97%);
+}
+
+.search-bar input {
+  border: none;
+  background: #eaeaea00;
+  font-weight: 600;
+  text-align: center;
+  color: #444;
+  font-size: 18px;
+}
+
+.search-bar .fas {
+  color: #444;
+}
+
+.button-explorer {
+  padding: 35px;
+}
+
+.button-explorer button {
+  color: white;
+  text-shadow: 0 0 1px #f2f2f2;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #E470DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E470DA), to(#A96CD8));
+  background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
+  -webkit-box-shadow: 3px 7px 10px #ccc;
+          box-shadow: 3px 7px 10px #ccc;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 50px 30px;
+  width: 100%;
+  height: 360px;
+}
+
+.fonctionnement h2 {
+  font-size: 28px;
+  font-weight: bolder;
+  text-shadow: 0 0 1px #333;
+  margin-bottom: 20px;
+}
+
+.fonctionnement .etape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 10px;
+  margin: 20px 0;
+  border-radius: 15px;
+  width: 95%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 2px 3px 5px #ccc;
+          box-shadow: 2px 3px 5px #ccc;
+}
+
+.fonctionnement .etape:hover {
+  background: rgba(147, 86, 220, 0.2);
+}
+
+.fonctionnement .etape:hover .etape-icon {
+  color: #9356DC;
+}
+
+.fonctionnement .etape .numero {
+  color: white;
+  width: 25px;
+  height: 25px;
+  margin-left: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #9356DC;
+}
+
+.fonctionnement .etape .etape-icon {
+  padding: 0 25px;
+  color: #777;
+}
+
+.fonctionnement .etape .etape-titre {
+  font-weight: bold;
+}
+
+/* tablette */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Partie header */
+  header .logo {
+    height: 100px;
+  }
+  header .logo img {
+    max-width: 250px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  /* Partie header */
+  header .logo {
+    height: 150px;
+    max-height: 250px;
+  }
+  header .logo img {
+    max-width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
