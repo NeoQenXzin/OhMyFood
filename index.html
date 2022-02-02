@@ -27,22 +27,35 @@
     </header>
 
     <main>
-        <section class="reservez">
-
-            <div class="search-bar">
-                <label for="search"><i class="fas fa-map-marker-alt"></i></label>
-                <input type="search" id="search" placeholder="" value="Paris, Belleville">
-            </div>
+        <!-- div de presentation de ohmyfood seulement en desktop et tablette  -->
+        <div class="presentation">
+            <div class="paralaxe">
+                <p> Avec <span class="span-logo"> Ohmyfood </span> commandez vos repas en ligne.</p>
+                    <p> Composez votre propre menu et réduisez votre temps d’attente aux restaurants. </p>
+                    <p> votre menu est préparé à l’avance.</p>
+                    <p> <span> Plus de perte de temps à consulter la carte ! </span></p>
+                </div>
+                </div>
+                <!-- fin div  -->
+                <section class="reservez">
+        
+                    <div class="search-bar">
+                        <label for="search"><i class="fas fa-map-marker-alt"></i></label>
+                        <input type="search" id="search" placeholder="" value="Paris, Belleville">
+                    </div>
             <div class="title-reservez">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p class="subtitle">Découvrez des restaurants d'exception, <br>
                     selectionnés par nos soins</p>
             </div>
             <div class="button-explorer">
-                <button>Explorer nos restaurants</button>
+                <a href="#restaurants"><button> Explorer nos restaurants</button></a>
             </div>
 
         </section>
+
+
+        <!-- Section regroupant les sections fontionnement et restaurant pour la mise en page desktop -->
         <div class="container-section-desktop">
             <section class="fonctionnement">
 
@@ -70,7 +83,7 @@
                     </div>
                 </div>
             </section>
-            <section class="restaurants">
+            <section class="restaurants" id="restaurants">
                 <h2>Restaurants</h2>
 
                 <div class="card new-card">
@@ -85,16 +98,14 @@
                             <p>Ménilmontant</p>
                         </div>
                         <div class="card-content-like">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                            <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
 
                 </div>
                 <div class="card new-card">
                     <div class="image-container">
-                        <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                            alt="image restaurant">
+                        <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="image restaurant">
                         <span class="new">Nouveau</span>
                     </div>
                     <div class="card-content">
@@ -103,8 +114,7 @@
                             <p>Charonne</p>
                         </div>
                         <div class="card-content-like">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                            <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
 
@@ -120,8 +130,7 @@
                             <p>Cité Rouge</p>
                         </div>
                         <div class="card-content-like">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                            <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
 
@@ -137,8 +146,8 @@
                             <p>Folie-Méricourt</p>
                         </div>
                         <div class="card-content-like">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                            <button><i class="fas fa-heart fa-2x"></i></button>
+
                         </div>
                     </div>
 
@@ -148,14 +157,14 @@
 
         </div>
         <footer>
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">  
+            <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
             <ul>
                 <li><a href="#"><span><i class="fas fa-utensils"></i></span> Devenir partenaire</a></li>
                 <li><a href="#"><span><i class="fas fa-hands-helping"></i></span> Proposer un restaurant</a></li>
-                
+
                 <li><a href="#">Mention légales</a></li>
                 <li><a href="mailto:email@sampe.com?">Contact</a></li>
-            </ul>          
+            </ul>
         </footer>
     </main>
 </body>
