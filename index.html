@@ -27,22 +27,48 @@
     </header>
 
     <main>
+
+        <!-- Loader chargement de la page  -->
+
+        <div class="loader">
+            <div class="contain-loader">
+                <h2 id="loader">Cooking in progress..</h2>
+                <div id="cooking">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div id="area">
+                        <div id="sides">
+                            <div id="pan"></div>
+                            <div id="handle"></div>
+                        </div>
+                        <div id="pancake">
+                            <div id="pastry"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- div de presentation de ohmyfood seulement en desktop et tablette  -->
         <div class="presentation">
             <div class="paralaxe">
                 <p> Avec <span class="span-logo"> Ohmyfood </span> commandez vos repas en ligne.</p>
-                    <p> Composez votre propre menu et réduisez votre temps d’attente aux restaurants. </p>
-                    <p> votre menu est préparé à l’avance.</p>
-                    <p> <span> Plus de perte de temps à consulter la carte ! </span></p>
-                </div>
-                </div>
-                <!-- fin div  -->
-                <section class="reservez">
-        
-                    <div class="search-bar">
-                        <label for="search"><i class="fas fa-map-marker-alt"></i></label>
-                        <input type="search" id="search" placeholder="" value="Paris, Belleville">
-                    </div>
+                <p> Composez votre propre menu et réduisez votre temps d’attente aux restaurants. </p>
+                <p> votre menu est préparé à l’avance.</p>
+                <p> <span> Plus de perte de temps à consulter la carte ! </span></p>
+            </div>
+        </div>
+        <!-- fin div  -->
+        <section class="reservez">
+
+            <div class="search-bar">
+                <label for="search"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="search" id="search" placeholder="" value="Paris, Belleville">
+            </div>
             <div class="title-reservez">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p class="subtitle">Découvrez des restaurants d'exception, <br>
@@ -88,15 +114,19 @@
 
                 <div class="card new-card">
                     <div class="image-container">
+                        <a href="restaurant-a-la-francaise.html">
                         <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                             alt="image restaurant">
+                        </a>
                         <span class="new">Nouveau</span>
                     </div>
                     <div class="card-content">
+                        <a href="restaurant-a-la-francaise.html">
                         <div class="card-content-text">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
+                        </a>
                         <div class="card-content-like">
                             <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>

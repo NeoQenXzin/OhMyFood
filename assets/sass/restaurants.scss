@@ -1,0 +1,103 @@
+// header 
+$purple: #9356DC;
+$pink: #FF79DA;
+$blue: #99E2D0;
+
+
+// Partie Header 
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    .back-accueil {
+        height: 100px;
+        width: 25%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .logo {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+    .ghost {
+        width: 25%;
+    }
+}
+
+
+// Partie Main
+
+.container-restaurant-card {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 30vh;
+
+    .restaurant-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 30px 10px;
+        height: 500px;
+        background: #f6f6f6;
+        border-radius: 50px 50px 0 0;
+    }
+    
+    .title-restaurant-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 94%;
+        h2 {
+            font-family: "Shrikhand", sans-serif;
+            font-size: 36px;
+        }
+        // Code bouton coeur a refactorisé
+        .card-content-like {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 15px;
+            padding-bottom: 5px;
+            button {
+                border: none;
+                position: relative;
+                .fa-heart {
+                    text-shadow: -2px 0px 1px rgba(15, 15, 15, 1), 0 2px 1px black, 2px 0 1px #000, 0 -2px 0 black;
+                    color: #FFF;
+                    border-radius: 50%;
+                    padding: 1px;
+                    &::before {
+                        content: "\f004";
+                        font-weight: bold;
+                        transition: color .5s ease-out, text-shadow 1s ease-in-out;
+                    }
+                    &:hover::before {
+                        color: $pink;
+                        transform: scale(1.1);
+                        transition: .9s ease-in-out;
+                        text-shadow: -2px 0px 1px darken($pink, 10%), 0 2px 1px darken($pink, 10%), 2px 0 1px darken($pink, 10%), 0 -2px 0 darken($pink, 10%);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+}

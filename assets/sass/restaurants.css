@@ -1,0 +1,141 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+nav .back-accueil {
+  height: 100px;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+nav .logo {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+nav .logo img {
+  width: 100%;
+  max-width: 200px;
+}
+
+nav .ghost {
+  width: 25%;
+}
+
+.container-restaurant-card {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 30vh;
+}
+
+.container-restaurant-card .restaurant-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 10px;
+  height: 500px;
+  background: #f6f6f6;
+  border-radius: 50px 50px 0 0;
+}
+
+.container-restaurant-card .title-restaurant-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 94%;
+}
+
+.container-restaurant-card .title-restaurant-card h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 36px;
+}
+
+.container-restaurant-card .title-restaurant-card .card-content-like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+.container-restaurant-card .title-restaurant-card .card-content-like button {
+  border: none;
+  position: relative;
+}
+
+.container-restaurant-card .title-restaurant-card .card-content-like button .fa-heart {
+  text-shadow: -2px 0px 1px #0f0f0f, 0 2px 1px black, 2px 0 1px #000, 0 -2px 0 black;
+  color: #FFF;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.container-restaurant-card .title-restaurant-card .card-content-like button .fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+  -webkit-transition: color .5s ease-out, text-shadow 1s ease-in-out;
+  transition: color .5s ease-out, text-shadow 1s ease-in-out;
+}
+
+.container-restaurant-card .title-restaurant-card .card-content-like button .fa-heart:hover::before {
+  color: #FF79DA;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .9s ease-in-out;
+  transition: .9s ease-in-out;
+  text-shadow: -2px 0px 1px #ff46cc, 0 2px 1px #ff46cc, 2px 0 1px #ff46cc, 0 -2px 0 #ff46cc;
+  cursor: pointer;
+}
+/*# sourceMappingURL=restaurants.css.map */
