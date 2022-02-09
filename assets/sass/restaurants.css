@@ -73,7 +73,7 @@ nav .ghost {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 10px;
-  height: 500px;
+  height: auto;
   background: #f6f6f6;
   border-radius: 50px 50px 0 0;
 }
@@ -113,6 +113,7 @@ nav .ghost {
 .container-restaurant-card .title-restaurant-card .card-content-like button {
   border: none;
   position: relative;
+  background-color: #f6f6f6;
 }
 
 .container-restaurant-card .title-restaurant-card .card-content-like button .fa-heart {
@@ -137,5 +138,107 @@ nav .ghost {
   transition: .9s ease-in-out;
   text-shadow: -2px 0px 1px #ff46cc, 0 2px 1px #ff46cc, 2px 0 1px #ff46cc, 0 -2px 0 #ff46cc;
   cursor: pointer;
+}
+
+.container-restaurant-card section {
+  padding: 25px 10px;
+  width: 100%;
+}
+
+.container-restaurant-card section .section-titre {
+  font-family: "Roboto", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.container-restaurant-card section .underline-titre {
+  width: 50px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.container-restaurant-card section button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0 10px 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: #fff;
+  -webkit-box-shadow: 2px 3px 5px #ccc;
+          box-shadow: 2px 3px 5px #ccc;
+  border-radius: 12px;
+  border: none;
+}
+
+.container-restaurant-card section button .card-restaurant-content {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.container-restaurant-card section button h3 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.container-restaurant-card section button p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.container-restaurant-card section button .price {
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.container-restaurant-card .button-commander {
+  padding: 30px 0px;
+  padding-bottom: 50px;
+}
+
+.container-restaurant-card .button-commander a {
+  text-decoration: none;
+}
+
+.container-restaurant-card .button-commander a button {
+  color: white;
+  text-shadow: 0 0 1px #f2f2f2;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 18px 60px;
+  border: none;
+  border-radius: 50px;
+  background: #E470DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E470DA), to(#A96CD8));
+  background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
+  -webkit-box-shadow: 3px 7px 10px #ccc;
+          box-shadow: 3px 7px 10px #ccc;
+  cursor: pointer;
+}
+
+.container-restaurant-card .button-commander a button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 3px 9px 12px #aaa;
+          box-shadow: 3px 9px 12px #aaa;
+  -webkit-transition: -webkit-filter .2s ease, -webkit-box-shadow .7s ease;
+  transition: -webkit-filter .2s ease, -webkit-box-shadow .7s ease;
+  transition: filter .2s ease, box-shadow .7s ease;
+  transition: filter .2s ease, box-shadow .7s ease, -webkit-filter .2s ease, -webkit-box-shadow .7s ease;
+}
+
+footer {
+  margin-top: 0;
 }
 /*# sourceMappingURL=restaurants.css.map */
