@@ -50,20 +50,20 @@ nav .ghost {
   width: 25%;
 }
 
-.background-note {
-  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+.main-img {
+  min-height: 200px;
+  margin-bottom: -100px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.background-francaise {
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-
-.background-palette {
-  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-
-.background-delice {
-  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+.img-main {
+  z-index: -1;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: -50px;
 }
 
 .container-restaurant-card {
@@ -72,7 +72,7 @@ nav .ghost {
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
-  padding-top: 30vh;
+  z-index: 1000;
 }
 
 .container-restaurant-card .restaurant-card {
@@ -174,15 +174,6 @@ nav .ghost {
 }
 
 .container-restaurant-card section button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin: 20px 0 10px 0;
   width: 100%;
   padding: 20px 10px;
@@ -191,29 +182,55 @@ nav .ghost {
           box-shadow: 2px 3px 5px #ccc;
   border-radius: 12px;
   border: none;
+  cursor: pointer;
 }
 
 .container-restaurant-card section button .card-restaurant-content {
   width: 100%;
-  text-align: left;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container-restaurant-card section button h3 {
+.container-restaurant-card section button .card-restaurant-content .card-restaurant-content-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 20px;
+  width: 89%;
+}
+
+.container-restaurant-card section button .card-restaurant-content .card-restaurant-content-text h3 {
   font-size: 18px;
   font-weight: 600;
   padding-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align-last: left;
 }
 
-.container-restaurant-card section button p {
+.container-restaurant-card section button .card-restaurant-content .card-restaurant-content-text p {
+  text-align: left;
   font-weight: 300;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.container-restaurant-card section button .price {
-  position: absolute;
-  right: 10px;
-  bottom: -10px;
+.container-restaurant-card section button .card-restaurant-content .price {
+  padding-top: 20px;
   font-weight: bolder;
   font-size: 18px;
 }
@@ -261,18 +278,21 @@ footer {
 @media screen and (min-width: 992px) {
   main {
     background: rgba(255, 121, 218, 0.7);
+    z-index: 1000;
+    position: relative;
+  }
+  .main-img {
+    min-height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .container-restaurant-card {
-    background-size: contain !important;
-    padding-top: 40% !important;
-    background-position-y: -200px;
     width: 80%;
     margin: 0px auto;
   }
   .container-restaurant-card .restaurant-card {
     padding: 30px 100px;
-    border-radius: 25px 25px 0 0;
-    margin-top: -60px !important;
+    border-radius: 25px 25px 25px 25px;
   }
   .container-restaurant-card .title-restaurant-card {
     padding-top: 20px;
@@ -292,12 +312,14 @@ footer {
     margin: 45px 0 10px 0;
     padding: 30px 35px;
   }
+  footer {
+    margin-top: 50px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .container-restaurant-card {
-    background-size: contain;
-    padding-top: 40vh;
+    background-size: cover;
   }
   .container-restaurant-card .restaurant-card {
     display: -webkit-box;

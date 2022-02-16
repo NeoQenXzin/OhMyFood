@@ -507,8 +507,8 @@ td, th {
       -ms-flex-align: center;
           align-items: center;
   opacity: 1;
-  -webkit-animation: loader-delay 2s ease-in-out 5s forwards;
-          animation: loader-delay 2s ease-in-out 5s forwards;
+  -webkit-animation: loader-delay 2s ease-in-out 2s forwards;
+          animation: loader-delay 2s ease-in-out 2s forwards;
 }
 
 @-webkit-keyframes loader-delay {

@@ -44,20 +44,32 @@ nav {
 
 
 // Partie Main
-.background-note {
-    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
+// .background-note {
+//     background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+// }
 
-.background-francaise {
-    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
+// .background-francaise {
+//     background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+// }
 
-.background-palette {
-    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
+// .background-palette {
+//     background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+// }
 
-.background-delice {
-    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+// .background-delice {
+//     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+// }
+.main-img{
+    min-height: 200px;
+    margin-bottom: -100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.img-main {
+    z-index: -1;
+    position: relative;
+    object-fit: cover;
+    top: -50px;
 }
 
 .container-restaurant-card {
@@ -66,7 +78,8 @@ nav {
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
-    padding-top: 30vh;
+    // padding-top: 30vh; // avec background image
+    z-index: 1000;
 
     .restaurant-card {
         display: flex;
@@ -147,9 +160,9 @@ nav {
         }
 
         button {
-            display: flex;
-            justify-content: start;
-            align-items: flex-start;
+            // display: flex;
+            // justify-content: start;
+            // align-items: flex-start;
             margin: 20px 0 10px 0;
             width: 100%;
             padding: 20px 10px;
@@ -157,30 +170,48 @@ nav {
             box-shadow: 2px 3px 5px #ccc;
             border-radius: 12px;
             border: none;
+            cursor: pointer;
 
             .card-restaurant-content {
                 width: 100%;
-                text-align: left;
-                position: relative;
-            }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-            h3 {
-                font-size: 18px;
-                font-weight: 600;
-                padding-bottom: 5px;
-            }
 
-            p {
-                font-weight: 300;
-                font-size: 16px;
-            }
+                .card-restaurant-content-text {
+                    display: flex;
+                    flex-direction: column;
+                    // align-items: flex-start; // Cette ligne empêche le text-overflow 
+                    padding-right: 20px;
+                    width: 89%;
 
-            .price {
-                position: absolute;
-                right: 10px;
-                bottom: -10px;
-                font-weight: bolder;
-                font-size: 18px;
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        padding-bottom: 5px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        text-align-last: left;
+                    }
+
+                    p {
+                        text-align: left;
+                        font-weight: 300;
+                        font-size: 16px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+                }
+
+                .price {
+                    padding-top: 20px;
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -227,26 +258,41 @@ footer {
 
 // Partie Responsive Desktop et plus 
 @media screen and(min-width: $large) {
-main{
-    background: rgba($pink, .7);
-}
-  .container-restaurant-card {
-        background-size: contain!important;
-        padding-top: 40%!important;
-        background-position-y: -200px;
+    main {
+        background: rgba($pink, .7);
+        z-index: 1000;
+        position: relative;
+    }
+
+    //partie image principale
+    .main-img {
+        min-height: 600px;
+        object-fit: cover;
+    }
+
+    // .img-main {
+    //     position: absolute;
+    //     object-fit: cover;
+    // }
+
+    .container-restaurant-card {
+        // background-size: contain !important;
+        // padding-top: 40% !important;
+        // background-position-y: -200px;
         width: 80%;
         margin: 0px auto;
-
+        
         .restaurant-card {
             padding: 30px 100px;
-            border-radius: 25px 25px 0 0;
-            margin-top: -60px!important;
+            border-radius: 25px 25px 25px 25px;
+            // margin-top: -60px !important;
         }
 
         .title-restaurant-card {
             padding-top: 20px;
             padding-bottom: 30px;
             width: 80%;
+
             h2 {
                 font-size: 34px;
             }
@@ -264,14 +310,19 @@ main{
         margin: 45px 0 10px 0;
         padding: 30px 35px;
     }
+
+    footer {
+        margin-top: 50px
+    }
 }
 
+
 // Partie responsive Tablette
-@media screen and(min-width: $medium) {
+@media screen and(min-width: $medium) and(max-width: $large) {
 
     .container-restaurant-card {
-        background-size: contain;
-        padding-top: 40vh;
+        background-size: cover;
+        // padding-top: 40vh;
 
         .restaurant-card {
             display: flex;
@@ -301,4 +352,6 @@ main{
         padding: 45px 40px;
         width: 80%;
     }
+
+  
 }
