@@ -59,12 +59,13 @@ nav {
 // .background-delice {
 //     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 // }
-.main-img{
+.main-img {
     min-height: 200px;
     margin-bottom: -100px;
     overflow: hidden;
     object-fit: cover;
 }
+
 .img-main {
     z-index: -1;
     position: relative;
@@ -165,89 +166,129 @@ nav {
             // align-items: flex-start;
             margin: 20px 0 10px 0;
             width: 100%;
-            padding: 20px 10px;
+            padding-left: 10px;
             background: #fff;
             box-shadow: 2px 3px 5px #ccc;
             border-radius: 12px;
             border: none;
             cursor: pointer;
+            height: auto;
 
-            .card-restaurant-content {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            // Animation valid check
+            :active {
 
-
-                .card-restaurant-content-text {
-                    display: flex;
-                    flex-direction: column;
-                    // align-items: flex-start; // Cette ligne empêche le text-overflow 
-                    padding-right: 20px;
-                    width: 89%;
-
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 600;
-                        padding-bottom: 5px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        text-align-last: left;
+                transition: all 200ms ease-in;
+                & .valid {
+                    width: 60px;
+                    transition: all 200ms ease-in;
+                    .fa-check-circle {
+                        transform: rotate(1turn);
                     }
-
-                    p {
-                        text-align: left;
-                        font-weight: 300;
-                        font-size: 16px;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                    }
-
-                }
-
-                .price {
-                    padding-top: 20px;
-                    font-weight: bolder;
-                    font-size: 18px;
                 }
             }
         }
-    }
 
-    .button-commander {
-        padding: 30px 0px;
-        padding-bottom: 50px;
+        .card-restaurant-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px auto;
 
-        a {
-            text-decoration: none;
 
-            button {
-                color: white;
-                text-shadow: 0 0 1px #f2f2f2;
-                font-weight: 500;
-                font-size: 18px;
-                padding: 18px 60px;
-                border: none;
-                border-radius: 50px;
-                background: #E470DA;
-                background: -webkit-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-                background: -moz-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-                background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-                box-shadow: 3px 7px 10px #ccc;
-                cursor: pointer;
+            .card-restaurant-content-text {
+                display: flex;
+                flex-direction: column;
+                // align-items: flex-start; // Cette ligne empêche le text-overflow 
+                padding-right: 0px;
+                min-width: calc(100% - 100px);
+                height: 100%;
 
-                &:hover {
-                    filter: brightness(110%);
-                    box-shadow: 3px 9px 12px #aaa;
-                    transition: filter .2s ease, box-shadow .7s ease;
+                h3 {
+                    font-size: 17px;
+                    font-weight: 600;
+                    padding-bottom: 9px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-align-last: left;
                 }
+
+                p {
+                    text-align: left;
+                    font-weight: 300;
+                    font-size: 15px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
             }
 
+            .price {
+                padding-top: 20px;
+                padding-right: 15px;
+                font-weight: bolder;
+                font-size: 18px;
+                text-align: left;
+                margin-left: auto;
+                text-align: right;
+                
+            }
+        }
+
+        .valid {
+            height: 100%;
+            background: $blue;
+            color: white;
+            width: 0;
+            padding: 5px 0;
+            overflow: hidden;
+            transition: width .3s;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .fa-check-circle {
+            transform: rotate(0);
+            transition: transform .5s;
+            padding: 20px 0px;
         }
     }
 }
+
+.button-commander {
+    padding: 30px 0px;
+    padding-bottom: 50px;
+
+    a {
+        text-decoration: none;
+
+        button {
+            color: white;
+            text-shadow: 0 0 1px #f2f2f2;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 18px 60px;
+            border: none;
+            border-radius: 50px;
+            background: #E470DA;
+            background: -webkit-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
+            background: -moz-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
+            background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
+            box-shadow: 3px 7px 10px #ccc;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(110%);
+                box-shadow: 3px 9px 12px #aaa;
+                transition: filter .2s ease, box-shadow .7s ease;
+            }
+        }
+
+    }
+}
+
 
 footer {
     margin-top: 0;
@@ -263,40 +304,45 @@ footer {
         z-index: 1000;
         position: relative;
     }
+    .fa-heart{
+        margin-top: 10px;
+      font-size: 5rem!important;
+    }
 
     //partie image principale
     .main-img {
         min-height: 600px;
         object-fit: cover;
     }
-
-    // .img-main {
-    //     position: absolute;
-    //     object-fit: cover;
-    // }
-
     .container-restaurant-card {
-        // background-size: contain !important;
-        // padding-top: 40% !important;
-        // background-position-y: -200px;
         width: 80%;
         margin: 0px auto;
-        
+
         .restaurant-card {
             padding: 30px 100px;
             border-radius: 25px 25px 25px 25px;
-            // margin-top: -60px !important;
         }
 
         .title-restaurant-card {
             padding-top: 20px;
             padding-bottom: 30px;
             width: 80%;
-
             h2 {
                 font-size: 34px;
             }
         }
+    
+// div animation check
+    .valid {
+        transition: width .3s;
+        padding: 20px 0;
+    }
+
+    .fa-check-circle {
+        transition: transform .5s;
+        padding: 30px 20px;
+    }
+
     }
 
     section {
@@ -308,12 +354,18 @@ footer {
 
     .container-restaurant-card section button {
         margin: 45px 0 10px 0;
-        padding: 30px 35px;
+        padding-left: 20px;
     }
-
+    
     footer {
         margin-top: 50px
     }
+    .card-restaurant-content {
+      
+        .card-restaurant-content-text {
+            padding-right: 10px;
+            width: 89%;
+        }}
 }
 
 
@@ -346,6 +398,18 @@ footer {
                 font-size: 34px;
             }
         }
+
+        
+        // div animation check
+    .valid {
+        transition: width .3s;
+        padding: 10px 0;
+    }
+
+    .fa-check-circle {
+        transition: transform .5s;
+        padding: 30px 20px;
+    }
     }
 
     section {
@@ -353,5 +417,8 @@ footer {
         width: 80%;
     }
 
-  
+    .container-restaurant-card section button {
+        // margin: 45px 0 10px 0;
+        padding-left: 30px;
+    }
 }
