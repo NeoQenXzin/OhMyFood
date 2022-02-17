@@ -145,6 +145,7 @@ nav {
 
     section {
         padding: 25px 10px;
+        height: auto;
         width: 100%;
 
         .section-titre {
@@ -166,6 +167,7 @@ nav {
             // align-items: flex-start;
             margin: 20px 0 10px 0;
             width: 100%;
+            height: auto;
             padding-left: 10px;
             background: #fff;
             box-shadow: 2px 3px 5px #ccc;
@@ -293,6 +295,77 @@ nav {
 footer {
     margin-top: 0;
 }
+
+
+
+
+
+//animation
+section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4){
+   animation-name:  apparition-menu;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+    //anim section entrée
+section:nth-of-type(1) {
+& > button:nth-of-type(1) {
+    animation-delay: .2s;
+}
+& > button:nth-of-type(2) {
+    animation-delay: .4s;
+}
+& > button:nth-of-type(3) {
+    animation-delay: .6s;
+}
+& > button:nth-of-type(4) {
+    animation-delay: .8s;
+}
+}
+   //anim section plats 
+section:nth-of-type(2) {
+& > button:nth-of-type(1) {
+    animation-delay: 1.2s;
+}
+& > button:nth-of-type(2) {
+    animation-delay: 1.4s;
+}
+& > button:nth-of-type(3) {
+    animation-delay: 1.6s;
+}
+& > button:nth-of-type(4) {
+    animation-delay: 1.8s;
+
+}
+}
+    //anim section desserts
+section:nth-of-type(3) {
+& > button:nth-of-type(1) {
+    animation-delay: 2.2s;
+}
+& > button:nth-of-type(2) {
+    animation-delay: 2.4s;
+}
+& > button:nth-of-type(3) {
+    animation-delay: 2.6s;
+}
+& > button:nth-of-type(4) {
+    animation-delay: 2.8s;
+}
+}
+
+
+@keyframes apparition-menu {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 
 // Media Queries 
