@@ -216,7 +216,6 @@ nav .ghost {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px auto;
 }
 
 .container-restaurant-card section .card-restaurant-content .card-restaurant-content-text {
@@ -288,11 +287,7 @@ nav .ghost {
   padding-bottom: 50px;
 }
 
-.button-commander a {
-  text-decoration: none;
-}
-
-.button-commander a button {
+.button-commander button {
   color: white;
   text-shadow: 0 0 1px #f2f2f2;
   font-weight: 500;
@@ -308,7 +303,7 @@ nav .ghost {
   cursor: pointer;
 }
 
-.button-commander a button:hover {
+.button-commander button:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-box-shadow: 3px 9px 12px #aaa;

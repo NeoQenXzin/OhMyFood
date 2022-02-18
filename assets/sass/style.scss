@@ -1,6 +1,6 @@
 @import "minireset.scss";
 @import "responsive.scss";
-@import "mixins-variable.scss";
+@import "mixins-variables.scss";
 @import "animations.scss";
 
 
@@ -120,18 +120,13 @@ main {
 
 //Bouton explorer nos restaurant
 .button-explorer {
+    color:red;
     padding: 35px;
+    
 
-    #main-button-action {
-        @include main-button-action;
-        padding: 18px 30px;
-    }
-
-    a {
-        text-decoration: none;
-
-
-
+        #main-button-action {
+            @include main-button-action;
+            padding: 18px 30px;
     }
 }
 

@@ -1,6 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -415,281 +414,7 @@ section:nth-of-type(3) > button:nth-of-type(4) {
   }
 }
 
-/* animation page accueil */
-.loader {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #E470DA;
-  z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 1;
-  -webkit-animation: loader-delay 2s ease-in-out 4s forwards;
-          animation: loader-delay 2s ease-in-out 4s forwards;
-}
-
-@keyframes loader-delay {
-  from {
-    height: 100%;
-    top: 0;
-  }
-  to {
-    height: 0%;
-    top: 100%;
-  }
-}
-
-.contain-loader {
-  background-color: #ff7edb;
-  height: 90vh;
-  width: 90vw;
-  overflow: hidden;
-}
-
-#loader {
-  position: relative;
-  margin: 0 auto;
-  top: 14vh;
-  width: 80vw;
-  text-align: center;
-  font-family: 'Amatic SC';
-  font-size: 6vh;
-  color: #333;
-  opacity: .75;
-  -webkit-animation: pulse 2s 2 forwards;
-          animation: pulse 2s 2 forwards;
-}
-
-#cooking {
-  position: relative;
-  left: 0;
-  top: 20%;
-  width: 100%;
-  height: 60%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: transparent;
-}
-
-#cooking .couverts {
-  width: auto;
-  height: auto;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-#cooking .couverts .fas {
-  -webkit-animation: ready 1s linear 2.5s forwards;
-          animation: ready 1s linear 2.5s forwards;
-  font-size: 150px;
-  color: #333;
-}
-
-#cooking .container-progress-bar {
-  border: 5px solid #333;
-  width: 70vw;
-  height: 50px;
-  border-radius: 12px;
-}
-
-#cooking .container-progress-bar .loading-bar {
-  width: 100%;
-  height: 100%;
-  background: #99E2D0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-animation: loading 1s 3s both;
-          animation: loading 1s 3s both;
-}
-
-#cooking .container-progress-bar .loading-bar .progress-bar {
-  width: 69vw;
-  height: 46px;
-  padding: 5px;
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    opacity: .25;
-  }
-  50% {
-    -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
-    opacity: 1;
-  }
-  95% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    opacity: .25;
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-@keyframes loading {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: 0;
-    background-color: #9be2d1;
-  }
-  24% {
-    -webkit-transform: scaleX(0.14);
-            transform: scaleX(0.14);
-    opacity: .2;
-    background-color: #9ae2d0;
-  }
-  52% {
-    -webkit-transform: scaleX(0.5);
-            transform: scaleX(0.5);
-    opacity: 0.7;
-    background: #99E2D0;
-  }
-  54%,
-  65% {
-    background: #96e1cf;
-  }
-  99% {
-    -webkit-transform: scaleX(0.9);
-            transform: scaleX(0.9);
-    opacity: 1;
-    background: #97e1cf;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    opacity: 1;
-    background: #95e1ce;
-  }
-}
-
-@keyframes ready {
-  from {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  to {
-    -webkit-transform: rotateY(-3turn);
-            transform: rotateY(-3turn);
-  }
-}
-
-/* Animation scss restaurants */
-section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4) {
-  -webkit-animation-name: apparition-menu;
-          animation-name: apparition-menu;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-section:nth-of-type(1) > button:nth-of-type(1) {
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(3) {
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(4) {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(1) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(2) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(3) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(4) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(1) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(2) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(3) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(4) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-}
-
-@keyframes apparition-menu {
-  0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
+/* Animation valid check */
 *,
 ::before,
 ::after {
@@ -812,19 +537,16 @@ main {
 }
 
 .button-explorer {
+  color: red;
   padding: 35px;
 }
 
-.button-explorer a {
-  text-decoration: none;
-}
-
-.button-explorer a button {
+.button-explorer #main-button-action {
   color: white;
   text-shadow: 0 0 1px #f2f2f2;
   font-weight: 500;
   font-size: 18px;
-  padding: 18px 30px;
+  padding: 18px 60px;
   border: none;
   border-radius: 50px;
   background: #E470DA;
@@ -833,9 +555,10 @@ main {
   -webkit-box-shadow: 3px 7px 10px #ccc;
           box-shadow: 3px 7px 10px #ccc;
   cursor: pointer;
+  padding: 18px 30px;
 }
 
-.button-explorer a button:hover {
+.button-explorer #main-button-action:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-box-shadow: 3px 9px 12px #aaa;
@@ -1035,7 +758,6 @@ main {
 .restaurants .card button .fa-heart {
   text-shadow: -2px 0px 1px #0f0f0f, 0 2px 1px black, 2px 0 1px #000, 0 -2px 0 black;
   color: #FFF;
-  background-color: #fff;
   border-radius: 50%;
   padding: 1px;
 }

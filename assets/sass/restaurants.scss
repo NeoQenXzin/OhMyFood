@@ -1,5 +1,5 @@
 @import "responsive.scss";
-@import "mixins-variable.scss";
+@import "mixins-variables.scss";
 
 
 // Partie Header 
@@ -234,10 +234,6 @@ nav {
 
     button {
         @include main-button-action;
-    }
-
-    a {
-        text-decoration: none;
     }
 }
 
