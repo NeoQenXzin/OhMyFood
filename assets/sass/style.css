@@ -64,8 +64,8 @@ td, th {
   font-size: 6vh;
   color: #333;
   opacity: .75;
-  -webkit-animation: pulse 2.5s linear infinite;
-          animation: pulse 2.5s linear infinite;
+  -webkit-animation: pulse 2s 2 forwards;
+          animation: pulse 2s 2 forwards;
 }
 
 #cooking {
@@ -141,10 +141,15 @@ td, th {
             transform: scale(1.2, 1);
     opacity: 1;
   }
-  100% {
+  95% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     opacity: .25;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0;
   }
 }
 
@@ -159,10 +164,15 @@ td, th {
             transform: scale(1.2, 1);
     opacity: 1;
   }
-  100% {
+  95% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     opacity: .25;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0;
   }
 }
 
