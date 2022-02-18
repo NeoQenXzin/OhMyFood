@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prototype site recherche restaurants gastronomique, repas réserver a l'avance pour ne pas attendre">
     <title>Ohmyfood</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="/assets/images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <!-- css -->
     <link rel="stylesheet" href="assets/sass/style.css">
     <!-- fonts -->
@@ -34,41 +39,18 @@
             <div class="contain-loader">
                 <h2 id="loader">Cooking in progress..</h2>
                 <div id="cooking">
-                    <div class="couverts"><i class="fas fa-utensils animated"></i>
-                    </div>
+                    <div class="couverts"><i class="fas fa-utensils animated"></i></div>
                     <div class="container-progress-bar">
                         <div class="loading-bar">
                             <div class="progress-bar"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-        <!-- <div class="loader">
-            <div class="contain-loader">
-                <h2 id="loader">Cooking in progress..</h2>
-                <div id="cooking">
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div id="area">
-                        <div id="sides">
-                            <div id="pan"></div>
-                            <div id="handle"></div>
-                        </div>
-                        <div id="pancake">
-                            <div id="pastry"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
 
-        <!-- div de presentation de ohmyfood seulement en desktop et tablette  -->
+        <!-- div de presentation de ohmyfood seulement en desktop -->
         <div class="presentation">
             <div class="paralaxe">
                 <p> Avec <span class="span-logo"> Ohmyfood </span> commandez vos repas en ligne.</p>
@@ -78,8 +60,10 @@
             </div>
         </div>
         <!-- fin div  -->
-        <section class="reservez">
 
+
+        <!-- Section reservez menu  -->
+        <section class="reservez">
             <div class="search-bar">
                 <label for="search"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" id="search" placeholder="" value="Paris, Belleville">
@@ -92,12 +76,12 @@
             <div class="button-explorer">
                 <a href="#restaurants"><button> Explorer nos restaurants</button></a>
             </div>
-
         </section>
 
 
-        <!-- Section regroupant les sections fontionnement et restaurant pour la mise en page desktop -->
+        <!-- Div regroupant les sections fontionnement et restaurant pour la mise en page desktop et tablette -->
         <div class="container-section-desktop">
+            <!-- Partie fonctionnement  -->
             <section class="fonctionnement">
 
                 <h2>Fonctionnement</h2>
@@ -124,6 +108,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Partie restaurants  -->
             <section class="restaurants" id="restaurants">
                 <h2>Restaurants</h2>
 
@@ -146,8 +132,8 @@
                             <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="card new-card">
                     <div class="image-container">
                         <a href="restaurant-la-note-enchantée.html">
@@ -166,8 +152,8 @@
                             <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="card">
                     <div class="image-container">
                         <a href="restaurant-a-la-francaise.html">
@@ -186,8 +172,8 @@
                             <button><i class="fas fa-heart fa-2x"></i></button>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="card">
                     <div class="image-container">
                         <a href="restaurant-le-delice-des-sens.html">
@@ -204,25 +190,25 @@
                         </a>
                         <div class="card-content-like">
                             <button><i class="fas fa-heart fa-2x"></i></button>
-
                         </div>
                     </div>
-
                 </div>
+
             </section>
 
-
         </div>
+
+        <!-- Footer  -->
         <footer>
             <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
             <ul>
                 <li><a href="#"><span><i class="fas fa-utensils"></i></span> Devenir partenaire</a></li>
                 <li><a href="#"><span><i class="fas fa-hands-helping"></i></span> Proposer un restaurant</a></li>
-
                 <li><a href="#">Mention légales</a></li>
                 <li><a href="mailto:email@sampe.com?">Contact</a></li>
             </ul>
         </footer>
+
     </main>
 </body>
 

@@ -1,9 +1,5 @@
 @import "responsive.scss";
-// variables
-
-$purple: #9356DC;
-$pink: #FF79DA;
-$blue: #99E2D0;
+@import "mixins-variable.scss";
 
 
 // Partie Header 
@@ -37,6 +33,7 @@ nav {
         }
     }
 
+    // Div vide pour centrer
     .ghost {
         width: 25%;
     }
@@ -44,33 +41,19 @@ nav {
 
 
 // Partie Main
-// .background-note {
-//     background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-// }
 
-// .background-francaise {
-//     background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-// }
-
-// .background-palette {
-//     background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-// }
-
-// .background-delice {
-//     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-// }
 .main-img {
     min-height: 200px;
     margin-bottom: -100px;
     overflow: hidden;
     object-fit: cover;
-}
 
-.img-main {
-    z-index: -1;
-    position: relative;
-    object-fit: cover;
-    top: -50px;
+    .img-main {
+        z-index: -1;
+        position: relative;
+        object-fit: cover;
+        top: -50px;
+    }
 }
 
 .container-restaurant-card {
@@ -79,9 +62,9 @@ nav {
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
-    // padding-top: 30vh; // avec background image
     z-index: 1000;
 
+    //carte restaurant
     .restaurant-card {
         display: flex;
         flex-direction: column;
@@ -119,23 +102,10 @@ nav {
                 background-color: #f6f6f6;
 
                 .fa-heart {
-                    text-shadow: -2px 0px 1px rgba(15, 15, 15, 1), 0 2px 1px black, 2px 0 1px #000, 0 -2px 0 black;
-                    color: #FFF;
-                    border-radius: 50%;
-                    padding: 1px;
-
-                    &::before {
-                        content: "\f004";
-                        font-weight: bold;
-                        transition: color .5s ease-out, text-shadow 1s ease-in-out;
-                    }
+                    @include heart-color;
 
                     &:hover::before {
-                        color: $pink;
-                        transform: scale(1.1);
-                        transition: .9s ease-in-out;
-                        text-shadow: -2px 0px 1px darken($pink, 10%), 0 2px 1px darken($pink, 10%), 2px 0 1px darken($pink, 10%), 0 -2px 0 darken($pink, 10%);
-                        cursor: pointer;
+                        @include heart-color-hover;
                     }
                 }
             }
@@ -143,6 +113,7 @@ nav {
         }
     }
 
+    // entrée/ plats/ desserts
     section {
         padding: 25px 10px;
         height: auto;
@@ -158,13 +129,9 @@ nav {
             width: 50px;
             height: 3px;
             background-color: $blue;
-
         }
 
         button {
-            // display: flex;
-            // justify-content: start;
-            // align-items: flex-start;
             margin: 20px 0 10px 0;
             width: 100%;
             height: auto;
@@ -178,11 +145,12 @@ nav {
 
             // Animation valid check
             :active {
-
                 transition: all 200ms ease-in;
+
                 & .valid {
                     width: 60px;
                     transition: all 200ms ease-in;
+
                     .fa-check-circle {
                         transform: rotate(1turn);
                     }
@@ -190,6 +158,7 @@ nav {
             }
         }
 
+        //carte menu
         .card-restaurant-content {
             width: 100%;
             height: 100%;
@@ -197,7 +166,6 @@ nav {
             justify-content: space-between;
             align-items: center;
             padding: 20px auto;
-
 
             .card-restaurant-content-text {
                 display: flex;
@@ -225,7 +193,6 @@ nav {
                     overflow: hidden;
                     white-space: nowrap;
                 }
-
             }
 
             .price {
@@ -236,10 +203,11 @@ nav {
                 text-align: left;
                 margin-left: auto;
                 text-align: right;
-                
+
             }
         }
 
+        // Partie animation valid check sur carte menu 
         .valid {
             height: 100%;
             background: $blue;
@@ -259,6 +227,7 @@ nav {
     }
 }
 
+// boutton commander
 .button-commander {
     padding: 30px 0px;
     padding-bottom: 50px;
@@ -267,31 +236,13 @@ nav {
         text-decoration: none;
 
         button {
-            color: white;
-            text-shadow: 0 0 1px #f2f2f2;
-            font-weight: 500;
-            font-size: 18px;
-            padding: 18px 60px;
-            border: none;
-            border-radius: 50px;
-            background: #E470DA;
-            background: -webkit-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            background: -moz-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            box-shadow: 3px 7px 10px #ccc;
-            cursor: pointer;
-
-            &:hover {
-                filter: brightness(110%);
-                box-shadow: 3px 9px 12px #aaa;
-                transition: filter .2s ease, box-shadow .7s ease;
-            }
+            @include main-button-action;
         }
 
     }
 }
 
-
+//footer
 footer {
     margin-top: 0;
 }
@@ -300,70 +251,7 @@ footer {
 
 
 
-//animation
-section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4){
-   animation-name:  apparition-menu;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
 
-    //anim section entrée
-section:nth-of-type(1) {
-& > button:nth-of-type(1) {
-    animation-delay: .2s;
-}
-& > button:nth-of-type(2) {
-    animation-delay: .4s;
-}
-& > button:nth-of-type(3) {
-    animation-delay: .6s;
-}
-& > button:nth-of-type(4) {
-    animation-delay: .8s;
-}
-}
-   //anim section plats 
-section:nth-of-type(2) {
-& > button:nth-of-type(1) {
-    animation-delay: 1.2s;
-}
-& > button:nth-of-type(2) {
-    animation-delay: 1.4s;
-}
-& > button:nth-of-type(3) {
-    animation-delay: 1.6s;
-}
-& > button:nth-of-type(4) {
-    animation-delay: 1.8s;
-
-}
-}
-    //anim section desserts
-section:nth-of-type(3) {
-& > button:nth-of-type(1) {
-    animation-delay: 2.2s;
-}
-& > button:nth-of-type(2) {
-    animation-delay: 2.4s;
-}
-& > button:nth-of-type(3) {
-    animation-delay: 2.6s;
-}
-& > button:nth-of-type(4) {
-    animation-delay: 2.8s;
-}
-}
-
-
-@keyframes apparition-menu {
-    0%{
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 
 
@@ -377,9 +265,10 @@ section:nth-of-type(3) {
         z-index: 1000;
         position: relative;
     }
-    .fa-heart{
+
+    .fa-heart {
         margin-top: 10px;
-      font-size: 5rem!important;
+        font-size: 5rem !important;
     }
 
     //partie image principale
@@ -387,6 +276,7 @@ section:nth-of-type(3) {
         min-height: 600px;
         object-fit: cover;
     }
+
     .container-restaurant-card {
         width: 80%;
         margin: 0px auto;
@@ -400,21 +290,22 @@ section:nth-of-type(3) {
             padding-top: 20px;
             padding-bottom: 30px;
             width: 80%;
+
             h2 {
                 font-size: 34px;
             }
         }
-    
-// div animation check
-    .valid {
-        transition: width .3s;
-        padding: 20px 0;
-    }
 
-    .fa-check-circle {
-        transition: transform .5s;
-        padding: 30px 20px;
-    }
+        // div animation check
+        .valid {
+            transition: width .3s;
+            padding: 20px 0;
+        }
+
+        .fa-check-circle {
+            transition: transform .5s;
+            padding: 30px 20px;
+        }
 
     }
 
@@ -429,16 +320,18 @@ section:nth-of-type(3) {
         margin: 45px 0 10px 0;
         padding-left: 20px;
     }
-    
+
     footer {
         margin-top: 50px
     }
+
     .card-restaurant-content {
-      
+
         .card-restaurant-content-text {
             padding-right: 10px;
             width: 89%;
-        }}
+        }
+    }
 }
 
 
@@ -472,17 +365,17 @@ section:nth-of-type(3) {
             }
         }
 
-        
-        // div animation check
-    .valid {
-        transition: width .3s;
-        padding: 10px 0;
-    }
 
-    .fa-check-circle {
-        transition: transform .5s;
-        padding: 30px 20px;
-    }
+        // div animation check
+        .valid {
+            transition: width .3s;
+            padding: 10px 0;
+        }
+
+        .fa-check-circle {
+            transition: transform .5s;
+            padding: 30px 20px;
+        }
     }
 
     section {
@@ -491,7 +384,6 @@ section:nth-of-type(3) {
     }
 
     .container-restaurant-card section button {
-        // margin: 45px 0 10px 0;
         padding-left: 30px;
     }
 }

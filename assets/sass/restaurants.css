@@ -58,7 +58,7 @@ nav .ghost {
      object-fit: cover;
 }
 
-.img-main {
+.main-img .img-main {
   z-index: -1;
   position: relative;
   -o-object-fit: cover;
@@ -321,97 +321,6 @@ nav .ghost {
 
 footer {
   margin-top: 0;
-}
-
-section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4) {
-  -webkit-animation-name: apparition-menu;
-          animation-name: apparition-menu;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-section:nth-of-type(1) > button:nth-of-type(1) {
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(3) {
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
-}
-
-section:nth-of-type(1) > button:nth-of-type(4) {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(1) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(2) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(3) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-
-section:nth-of-type(2) > button:nth-of-type(4) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(1) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(2) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(3) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
-}
-
-section:nth-of-type(3) > button:nth-of-type(4) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-}
-
-@-webkit-keyframes apparition-menu {
-  0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes apparition-menu {
-  0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media screen and (min-width: 992px) {

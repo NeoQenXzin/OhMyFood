@@ -1,11 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import "mixins-variable.scss";
 
-// Charte graphique
-$purple: #9356DC;
-$pink: #FF79DA;
-$blue: #99E2D0;
 
-//
+/* animation page accueil */
+// Loader demarrage 
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E470DA;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    animation: loader-delay 2s ease-in-out 4s forwards;
+}
+
+// anim fermeture height
+@keyframes loader-delay {
+    from {
+        height: 100%;
+        top: 0;
+    }
+
+    to {
+        height: 0%;
+        top: 100%;
+    }
+}
+
+
+
 .contain-loader {
     background-color: lighten($pink, 1);
     height: 90vh;
@@ -13,11 +44,11 @@ $blue: #99E2D0;
     overflow: hidden;
 }
 
+// h2 cooking progress
 #loader {
     position: relative;
     margin: 0 auto;
     top: 14vh;
-    // top: 22vh;
     width: 80vw;
     text-align: center;
     font-family: 'Amatic SC';
@@ -31,7 +62,6 @@ $blue: #99E2D0;
     position: relative;
     left: 0;
     top: 20%;
-    // top: 25%;
     width: 100%;
     height: 60%;
     overflow: hidden;
@@ -41,6 +71,7 @@ $blue: #99E2D0;
     align-items: center;
     background: transparent;
 
+    // Partie icon
     .couverts {
         width: auto;
         height: auto;
@@ -54,12 +85,11 @@ $blue: #99E2D0;
         }
     }
 
-    // animation 
+    // Barre de chargement
 
     .container-progress-bar {
         border: 5px solid#333;
         width: 70vw;
-        // width: 45vw;
         height: 50px;
         border-radius: 12px;
 
@@ -73,18 +103,15 @@ $blue: #99E2D0;
 
             .progress-bar {
                 width: 69vw;
-                // width: 44vw;
                 height: 46px;
                 padding: 5px;
-                // border: 2px solid rgb(0, 0, 0);
-
             }
-
         }
     }
 
 }
 
+//animation h2 cooking progress
 @keyframes pulse {
     0% {
         transform: scale(1, 1);
@@ -100,6 +127,7 @@ $blue: #99E2D0;
         transform: scale(1, 1);
         opacity: .25;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -114,7 +142,6 @@ $blue: #99E2D0;
         transform: scaleX(0);
         opacity: 0;
         background-color: lighten($blue, .4);
-
     }
 
     24% {
@@ -131,7 +158,6 @@ $blue: #99E2D0;
 
     54%,
     65% {
-        // opacity: 0.2;
         background: darken($blue, .7);
     }
 
@@ -149,16 +175,84 @@ $blue: #99E2D0;
 
 }
 
-// animation couverts 
+// animation couverts icon fontawesome
 @keyframes ready {
     from {
         transform: rotateY(0);
-        // transform: scale(1);
     }
 
     to {
         transform: rotateY(-3turn);
-        // transform: scale(1.3);
     }
 
 }
+
+
+/* Animation scss restaurants */
+//animation apparition progressive menu
+section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4){
+    animation-name:  apparition-menu;
+     animation-duration: 1s;
+     animation-timing-function: ease-in-out;
+ }
+ 
+     //anim section entrée
+ section:nth-of-type(1) {
+ & > button:nth-of-type(1) {
+     animation-delay: .2s;
+ }
+ & > button:nth-of-type(2) {
+     animation-delay: .4s;
+ }
+ & > button:nth-of-type(3) {
+     animation-delay: .6s;
+ }
+ & > button:nth-of-type(4) {
+     animation-delay: .8s;
+ }
+ }
+    //anim section plats 
+ section:nth-of-type(2) {
+ & > button:nth-of-type(1) {
+     animation-delay: 1.2s;
+ }
+ & > button:nth-of-type(2) {
+     animation-delay: 1.4s;
+ }
+ & > button:nth-of-type(3) {
+     animation-delay: 1.6s;
+ }
+ & > button:nth-of-type(4) {
+     animation-delay: 1.8s;
+ 
+ }
+ }
+     //anim section desserts
+ section:nth-of-type(3) {
+ & > button:nth-of-type(1) {
+     animation-delay: 2.2s;
+ }
+ & > button:nth-of-type(2) {
+     animation-delay: 2.4s;
+ }
+ & > button:nth-of-type(3) {
+     animation-delay: 2.6s;
+ }
+ & > button:nth-of-type(4) {
+     animation-delay: 2.8s;
+ }
+ }
+ 
+ 
+ @keyframes apparition-menu {
+     0%{
+         transform: translateY(20px);
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+ }
+
+ /* Animation valid check */
+ // Se trouve dans restaurant.scss car plus lisibles et fonctionnelle 

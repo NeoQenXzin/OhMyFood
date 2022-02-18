@@ -1,12 +1,7 @@
 @import "minireset.scss";
 @import "responsive.scss";
+@import "mixins-variable.scss";
 @import "animations.scss";
-
-// Charte graphique
-$purple: #9356DC;
-$pink: #FF79DA;
-$blue: #99E2D0;
-//
 
 
 *,
@@ -19,36 +14,6 @@ $blue: #99E2D0;
 }
 
 
-// Loader demarrage 
-.loader {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #E470DA;
-    z-index: 99;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-    animation: loader-delay 2s ease-in-out 4s forwards;
-}
-
-@keyframes loader-delay {
-    from {
-        height: 100%;
-        top: 0;
-    }
-
-    to {
-        height: 0%;
-        top: 100%;
-    }
-}
 
 
 // Mobile first 
@@ -123,6 +88,9 @@ main {
     display: none;
 }
 
+//
+
+//barre de recherche
 .search-bar {
     display: flex;
     justify-content: center;
@@ -150,6 +118,7 @@ main {
     }
 }
 
+//Bouton explorer nos restaurant
 .button-explorer {
     padding: 35px;
 
@@ -157,25 +126,8 @@ main {
         text-decoration: none;
 
         button {
-            color: white;
-            text-shadow: 0 0 1px #f2f2f2;
-            font-weight: 500;
-            font-size: 18px;
+            @include main-button-action;
             padding: 18px 30px;
-            border: none;
-            border-radius: 50px;
-            background: #E470DA;
-            background: -webkit-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            background: -moz-linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            background: linear-gradient(to bottom, #E470DA 0%, #A96CD8 100%);
-            box-shadow: 3px 7px 10px #ccc;
-            cursor: pointer;
-
-            &:hover {
-                filter: brightness(110%);
-                box-shadow: 3px 9px 12px #aaa;
-                transition: filter .2s ease, box-shadow .7s ease;
-            }
         }
 
     }
@@ -325,30 +277,13 @@ main {
             position: relative;
 
             .fa-heart {
-                text-shadow: -2px 0px 1px rgba(15, 15, 15, 1), 0 2px 1px black, 2px 0 1px #000, 0 -2px 0 black;
-                color: #FFF;
-                background-color: #fff;
-                border-radius: 50%;
-                padding: 1px;
-
-                /* Pourquoi utilisé before et non pas directement hover? */
-                &::before {
-                    content: "\f004";
-                    font-weight: bold;
-                    transition: color .5s ease-out, text-shadow 1s ease-in-out;
-                }
+                @include heart-color;
 
                 &:hover::before {
-                    color: $pink;
-                    transform: scale(1.1);
-                    transition: .9s ease-in-out;
-                    text-shadow: -2px 0px 1px darken($pink, 10%), 0 2px 1px darken($pink, 10%), 2px 0 1px darken($pink, 10%), 0 -2px 0 darken($pink, 10%);
-                    cursor: pointer;
+                    @include heart-color-hover;
                 }
             }
-
         }
-
     }
 }
 
@@ -375,22 +310,19 @@ footer {
             width: 100%;
 
             span {
-                // padding-right: 10px;
                 display: inline-block;
                 width: 25px;
-                // background-color: #FF79DA;
             }
         }
 
-
     }
 }
+
 
 // Media Queries
 
 
 /* tablette */
-
 
 @media screen and (min-width: $medium) and (max-width: $large) {
 
