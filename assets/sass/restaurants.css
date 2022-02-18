@@ -174,7 +174,7 @@ nav .ghost {
   background-color: #99E2D0;
 }
 
-.container-restaurant-card section button {
+.container-restaurant-card section .div-button {
   margin: 20px 0 10px 0;
   width: 100%;
   height: auto;
@@ -188,18 +188,18 @@ nav .ghost {
   height: auto;
 }
 
-.container-restaurant-card section button :active {
+.container-restaurant-card section .div-button :active {
   -webkit-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
 
-.container-restaurant-card section button :active .valid {
+.container-restaurant-card section .div-button :active .valid {
   width: 60px;
   -webkit-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
 
-.container-restaurant-card section button :active .valid .fa-check-circle {
+.container-restaurant-card section .div-button :active .valid .fa-check-circle {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
 }
@@ -279,7 +279,7 @@ nav .ghost {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
-  padding: 20px 0px;
+  padding: 20px 10px;
 }
 
 .button-commander {
@@ -352,7 +352,7 @@ footer {
   .container-restaurant-card .valid {
     -webkit-transition: width .3s;
     transition: width .3s;
-    padding: 20px 0;
+    padding: 20px 40px;
   }
   .container-restaurant-card .fa-check-circle {
     -webkit-transition: -webkit-transform .5s;

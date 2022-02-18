@@ -120,13 +120,13 @@ main {
 
 //Bouton explorer nos restaurant
 .button-explorer {
-    color:red;
+    color: red;
     padding: 35px;
-    
 
-        #main-button-action {
-            @include main-button-action;
-            padding: 18px 30px;
+
+    #main-button-action {
+        @include main-button-action;
+        padding: 18px 30px;
     }
 }
 

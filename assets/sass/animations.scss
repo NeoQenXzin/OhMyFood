@@ -190,69 +190,84 @@
 
 /* Animation scss restaurants */
 //animation apparition progressive menu
-section > button:nth-of-type(1), section > button:nth-of-type(2), section > button:nth-of-type(3), section > button:nth-of-type(4){
-    animation-name:  apparition-menu;
-     animation-duration: 1s;
-     animation-timing-function: ease-in-out;
- }
- 
-     //anim section entrée
- section:nth-of-type(1) {
- & > button:nth-of-type(1) {
-     animation-delay: .2s;
- }
- & > button:nth-of-type(2) {
-     animation-delay: .4s;
- }
- & > button:nth-of-type(3) {
-     animation-delay: .6s;
- }
- & > button:nth-of-type(4) {
-     animation-delay: .8s;
- }
- }
-    //anim section plats 
- section:nth-of-type(2) {
- & > button:nth-of-type(1) {
-     animation-delay: 1.2s;
- }
- & > button:nth-of-type(2) {
-     animation-delay: 1.4s;
- }
- & > button:nth-of-type(3) {
-     animation-delay: 1.6s;
- }
- & > button:nth-of-type(4) {
-     animation-delay: 1.8s;
- 
- }
- }
-     //anim section desserts
- section:nth-of-type(3) {
- & > button:nth-of-type(1) {
-     animation-delay: 2.2s;
- }
- & > button:nth-of-type(2) {
-     animation-delay: 2.4s;
- }
- & > button:nth-of-type(3) {
-     animation-delay: 2.6s;
- }
- & > button:nth-of-type(4) {
-     animation-delay: 2.8s;
- }
- }
- 
- 
- @keyframes apparition-menu {
-     0%{
-         transform: translateY(20px);
-         opacity: 0;
-     }
-     100% {
-         opacity: 1;
-     }
- }
+section>.div-button:nth-of-type(1),
+section>.div-button:nth-of-type(2),
+section>.div-button:nth-of-type(3),
+section>.div-button4:nth-of-type(4) {
+    animation-name: apparition-menu;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
 
- /* Animation valid check */
- // Se trouve dans restaurant.scss car plus lisibles et fonctionnelle 
+//anim section entrée
+section:nth-of-type(1) {
+    &>.div-button:nth-of-type(1) {
+        animation-delay: .2s;
+    }
+
+    &>.div-button:nth-of-type(2) {
+        animation-delay: .4s;
+    }
+
+    &>.div-button:nth-of-type(3) {
+        animation-delay: .6s;
+    }
+
+    &> .div-button:nth-of-type(4) {
+        animation-delay: .8s;
+    }
+}
+
+//anim section plats 
+section:nth-of-type(2) {
+    &>.div-button:nth-of-type(1) {
+        animation-delay: 1.2s;
+    }
+
+    &>.div-button:nth-of-type(2) {
+        animation-delay: 1.4s;
+    }
+
+    &>.div-button:nth-of-type(3) {
+        animation-delay: 1.6s;
+    }
+
+    &>.div-button:nth-of-type(4) {
+        animation-delay: 1.8s;
+
+    }
+}
+
+//anim section desserts
+section:nth-of-type(3) {
+    &>.div-button:nth-of-type(1) {
+        animation-delay: 2.2s;
+    }
+
+    &>.div-button:nth-of-type(2) {
+        animation-delay: 2.4s;
+    }
+
+    &>.div-button:nth-of-type(3) {
+        animation-delay: 2.6s;
+    }
+
+    &>.div-button:nth-of-type(4) {
+        animation-delay: 2.8s;
+    }
+}
+
+
+@keyframes apparition-menu {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation valid check */
+// Se trouve dans restaurant.scss car plus lisibles et fonctionnelle 

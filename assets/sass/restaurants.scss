@@ -131,7 +131,7 @@ nav {
             background-color: $blue;
         }
 
-        button {
+        .div-button {
             margin: 20px 0 10px 0;
             width: 100%;
             height: auto;
@@ -222,7 +222,7 @@ nav {
         .fa-check-circle {
             transform: rotate(0);
             transition: transform .5s;
-            padding: 20px 0px;
+            padding: 20px 10px;
         }
     }
 }
@@ -294,7 +294,7 @@ footer {
         // div animation check
         .valid {
             transition: width .3s;
-            padding: 20px 0;
+            padding: 20px 40px;
         }
 
         .fa-check-circle {
