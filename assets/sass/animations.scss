@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+// Charte graphique
+$purple: #9356DC;
+$pink: #FF79DA;
+$blue: #99E2D0;
+
+//
+.contain-loader {
+    background-color: lighten($pink, 1);
+    height: 90vh;
+    width: 90vw;
+    overflow: hidden;
+}
+
+#loader {
+    position: relative;
+    margin: 0 auto;
+    top: 14vh;
+    // top: 22vh;
+    width: 80vw;
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 6vh;
+    color: #333;
+    opacity: .75;
+    animation: pulse 2.5s linear infinite;
+}
+
+#cooking {
+    position: relative;
+    left: 0;
+    top: 20%;
+    // top: 25%;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background: transparent;
+
+    .couverts {
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-bottom: 100px;
+        
+        .fas {
+            animation: ready 1s linear 2.5s forwards;
+            font-size: 150px;
+            color: #333;
+        }
+    }
+
+    // animation 
+
+    .container-progress-bar {
+        border: 5px solid#333;
+        width: 70vw;
+        // width: 45vw;
+        height: 50px;
+        border-radius: 12px;
+
+        .loading-bar {
+            width: 100%;
+            height: 100%;
+            background: $blue;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: loading 1s 3s both;
+
+            .progress-bar {
+                width: 69vw;
+                // width: 44vw;
+                height: 46px;
+                padding: 5px;
+                // border: 2px solid rgb(0, 0, 0);
+
+            }
+
+        }
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+        opacity: .25;
+    }
+
+    50% {
+        transform: scale(1.2, 1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: .25;
+    }
+}
+
+
+
+// animation chargement
+@keyframes loading {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+        background-color: lighten($blue, .4);
+        
+    }
+    
+    24% {
+        transform: scaleX(.14);
+        opacity: .2;
+        background-color: lighten($blue, .2);
+    }
+
+    52% {
+        transform: scaleX(.5);
+        opacity: 0.7;
+        background: $blue;
+    }
+
+    54%,
+    65% {
+        // opacity: 0.2;
+        background: darken($blue, .7);
+    }
+    
+    99% {
+        transform: scaleX(.9);
+        opacity: 1;
+        background: darken($blue, 0.6);
+    }
+    
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+        background: darken($blue, 1);
+    }
+
+}
+
+// animation couverts 
+@keyframes ready {
+    from {
+        transform: rotateY(0);
+        // transform: scale(1);
+    }
+    to {
+        transform: rotateY(-3turn);
+        // transform: scale(1.3);
+    }
+    
+}
