@@ -122,13 +122,15 @@ main {
 .button-explorer {
     padding: 35px;
 
+    #main-button-action {
+        @include main-button-action;
+        padding: 18px 30px;
+    }
+
     a {
         text-decoration: none;
 
-        button {
-            @include main-button-action;
-            padding: 18px 30px;
-        }
+
 
     }
 }
