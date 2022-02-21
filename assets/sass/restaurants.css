@@ -51,7 +51,8 @@ nav .ghost {
 }
 
 .main-img {
-  min-height: 200px;
+  height: 48vh;
+  width: 100%;
   margin-bottom: -100px;
   overflow: hidden;
   -o-object-fit: cover;
@@ -60,10 +61,14 @@ nav .ghost {
 
 .main-img .img-main {
   z-index: -1;
+  width: 100%;
+  height: 50vh;
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -50px;
+  -o-object-position: center;
+     object-position: center;
+  top: -13%;
 }
 
 .container-restaurant-card {
@@ -324,14 +329,20 @@ footer {
     z-index: 1000;
     position: relative;
   }
+  .main-img {
+    height: 60vh;
+    width: 100%;
+    margin: auto;
+    margin-bottom: -50px;
+    padding-top: 50px;
+    border-radius: 0px 0px 15px 15px;
+  }
+  .main-img .img-main {
+    height: 60vh;
+  }
   .fa-heart {
     margin-top: 10px;
     font-size: 5rem !important;
-  }
-  .main-img {
-    min-height: 600px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   .container-restaurant-card {
     width: 80%;

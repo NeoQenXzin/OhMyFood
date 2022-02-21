@@ -43,16 +43,22 @@ nav {
 // Partie Main
 
 .main-img {
-    min-height: 200px;
+    height: 48vh;
+    width: 100%;
     margin-bottom: -100px;
     overflow: hidden;
     object-fit: cover;
+    // object-position: center;
+    // max-height: 50vh;
 
     .img-main {
         z-index: -1;
+        width: 100%;
+        height: 50vh;
         position: relative;
         object-fit: cover;
-        top: -50px;
+        object-position: center;
+        top: -13%;
     }
 }
 
@@ -260,17 +266,31 @@ footer {
         z-index: 1000;
         position: relative;
     }
+    
+    // Partie Main
+    //partie image principale
+
+.main-img {
+    height: 60vh;
+    width: 100%;
+    margin: auto;
+    margin-bottom: -50px;
+    padding-top: 50px;
+    border-radius: 0px 0px 15px 15px;
+
+    .img-main {
+        // margin-top: 50px;
+        height: 60vh;
+        // top: -13%;
+    }
+}
 
     .fa-heart {
         margin-top: 10px;
         font-size: 5rem !important;
     }
 
-    //partie image principale
-    .main-img {
-        min-height: 600px;
-        object-fit: cover;
-    }
+
 
     .container-restaurant-card {
         width: 80%;
