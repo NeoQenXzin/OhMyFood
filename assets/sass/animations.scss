@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     opacity: 1;
-    animation: loader-delay 2s ease-in-out 4s forwards;
+    animation: loader-delay .2s ease-in-out 3.4s forwards;
 }
 
 // anim fermeture height
@@ -99,7 +99,7 @@
             background: $blue;
             transform: scaleX(0);
             transform-origin: left;
-            animation: loading 1s 3s both;
+            animation: loading .5s 2.6s both;
 
             .progress-bar {
                 width: 69vw;

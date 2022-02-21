@@ -24,8 +24,8 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 1;
-  -webkit-animation: loader-delay 2s ease-in-out 4s forwards;
-          animation: loader-delay 2s ease-in-out 4s forwards;
+  -webkit-animation: loader-delay .2s ease-in-out 3.4s forwards;
+          animation: loader-delay .2s ease-in-out 3.4s forwards;
 }
 
 @-webkit-keyframes loader-delay {
@@ -123,8 +123,8 @@
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-animation: loading 1s 3s both;
-          animation: loading 1s 3s both;
+  -webkit-animation: loading .5s 2.6s both;
+          animation: loading .5s 2.6s both;
 }
 
 #cooking .container-progress-bar .loading-bar .progress-bar {
