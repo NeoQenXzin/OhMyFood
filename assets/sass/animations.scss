@@ -193,7 +193,8 @@
 section>.div-button:nth-of-type(1),
 section>.div-button:nth-of-type(2),
 section>.div-button:nth-of-type(3),
-section>.div-button4:nth-of-type(4) {
+section>.div-button:nth-of-type(4),
+section>.div-button:nth-of-type(5) {
     animation-name: apparition-menu;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -201,20 +202,23 @@ section>.div-button4:nth-of-type(4) {
 
 //anim section entrée
 section:nth-of-type(1) {
-    &>.div-button:nth-of-type(1) {
+    &>.div-button:nth-of-type(2) {
         animation-delay: .2s;
     }
 
-    &>.div-button:nth-of-type(2) {
+    &>.div-button:nth-of-type(3) {
         animation-delay: .4s;
     }
 
-    &>.div-button:nth-of-type(3) {
+    &>.div-button:nth-of-type(4) {
         animation-delay: .6s;
     }
 
-    &> .div-button:nth-of-type(4) {
+    &>.div-button:nth-of-type(5) {
         animation-delay: .8s;
+        animation-name: apparition-menu;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
     }
 }
 
